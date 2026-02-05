@@ -4,9 +4,20 @@ import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const [displayedText, setDisplayedText] = useState('');
-  const fullText = "Hi, I'm Yash Raj";
-  const subtitle = "Software Developer | AI Engineer Aspirant | Full-Stack Builder";
+  const [roleText, setRoleText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [loopNum, setLoopNum] = useState(0);
+  const [typingSpeed, setTypingSpeed] = useState(150);
 
+  const fullText = "Hi, I'm Yash Raj";
+  const roles = [
+    "Software Developer", 
+    "AI Engineer Aspirant", 
+    "Full-Stack Builder", 
+    "Open Source Enthusiast"
+  ];
+
+  // Main Title Typing Effect
   useEffect(() => {
     let index = 0;
     const timer = setInterval(() => {
@@ -17,8 +28,51 @@ const Hero = () => {
         clearInterval(timer);
       }
     }, 100);
-
     return () => clearInterval(timer);
+  }, []);
+
+  // Role Rotating Effect
+  useEffect(() => {
+    const handleType = () => {
+      const i = loopNum % roles.length;
+      const fullRole = roles[i];
+
+      setRoleText(isDeleting 
+        ? fullRole.substring(0, roleText.length - 1) 
+        : fullRole.substring(0, roleText.length + 1)
+      );
+
+      setTypingSpeed(isDeleting ? 30 : 150);
+
+      if (!isDeleting && roleText === fullRole) {
+        setTimeout(() => setIsDeleting(true), 2000);
+      } else if (isDeleting && roleText === '') {
+        setIsDeleting(false);
+        setLoopNum(loopNum + 1);
+      }
+    };
+
+    const timer = setTimeout(handleType, typingSpeed);
+    return () => clearTimeout(timer);
+  }, [roleText, isDeleting, loopNum, roles, typingSpeed]);
+
+  const [bootLogs, setBootLogs] = useState<string[]>([]);
+  const logs = [
+    "> Initializing core systems...",
+    "> Loading React modules...",
+    "> Connecting to neural network...",
+    "> Fetching coffee...",
+    "> System ready. Welcome, user."
+  ];
+
+  useEffect(() => {
+    let delay = 0;
+    logs.forEach((log, index) => {
+      setTimeout(() => {
+        setBootLogs(prev => [...prev, log]);
+      }, delay);
+      delay += 800; // Stagger logs
+    });
   }, []);
 
   const codeSnippets = [
@@ -74,20 +128,50 @@ const Hero = () => {
           />
         </motion.h1>
 
-        {/* Subtitle */}
-        <motion.p
-          className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-12"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2, duration: 1 }}
+        {/* Height Preserving Container for Subtitle */}
+        <div className="h-12 md:h-16 mb-8 flex items-center justify-center">
+          <motion.p
+            className="text-xl md:text-3xl text-gray-300 font-mono"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1, duration: 1 }}
+          >
+            I am a <span className="text-neon-purple font-bold">{roleText}</span>
+            <span className="animate-pulse">|</span>
+          </motion.p>
+        </div>
+
+        {/* Mini Terminal Output */}
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          className="max-w-md mx-auto mb-12 bg-black/60 backdrop-blur-sm border border-white/10 rounded-lg p-4 font-mono text-xs md:text-sm text-left shadow-2xl"
         >
-          {subtitle.split(' | ').map((part, i) => (
-            <span key={i}>
-              {i > 0 && <span className="text-neon-purple mx-2">|</span>}
-              <span className="hover:text-neon-cyan transition-colors">{part}</span>
-            </span>
-          ))}
-        </motion.p>
+          <div className="flex gap-1.5 mb-3 border-b border-white/10 pb-2">
+            <div className="w-2.5 h-2.5 rounded-full bg-red-500" />
+            <div className="w-2.5 h-2.5 rounded-full bg-yellow-500" />
+            <div className="w-2.5 h-2.5 rounded-full bg-green-500" />
+          </div>
+          <div className="space-y-1 text-green-400">
+            {bootLogs.map((log, i) => (
+              <motion.div 
+                key={i}
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+              >
+                {log}
+              </motion.div>
+            ))}
+            <motion.div 
+              animate={{ opacity: [0, 1] }}
+              transition={{ repeat: Infinity, duration: 0.8 }}
+              className="text-neon-cyan"
+            >
+              $ _
+            </motion.div>
+          </div>
+        </motion.div>
 
         {/* CTA Buttons */}
         <motion.div

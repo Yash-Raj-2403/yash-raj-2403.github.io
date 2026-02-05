@@ -25,31 +25,77 @@ const Projects = () => {
       id: 1,
       title: 'ROOTSnROUTES',
       description: 'AI-powered travel planning & route optimization platform',
-      longDescription: 'A comprehensive travel companion app that revolutionizes trip planning. It uses Dijkstra\'s algorithm to calculate the most efficient routes between multiple destinations, considering factors like distance and estimated time. The platform also offers real-time suggestions for local attractions and calculates estimated travel costs.',
+      longDescription: 'A smart travel companion that revolutionizes trip planning using Dijkstra\'s algorithm for efficient route optimization. Features real-time traffic updates, weather integration, and personalized travel recommendations to create the perfect itinerary.',
       techStack: ['React', 'Node.js', 'MongoDB', 'Google Maps API', 'Dijkstra Algorithm', 'Express'],
       github: 'https://github.com/Yash-Raj-2403/ROOTSnROUTES',
+      liveDemo: 'https://rootsnroutes-sigma.vercel.app/',
       category: 'Full-Stack',
       visualType: 'map',
     },
     {
       id: 2,
       title: 'Fixora',
-      description: 'Intelligent RAG-based AI assistant',
-      longDescription: 'Fixora is a sophisticated chatbot built using Retrieval-Augmented Generation (RAG). It leverages LangChain and vector databases to provide context-aware responses based on custom document knowledge bases. This allows for highly accurate information retrieval from uploaded manuals, docs, or textbooks.',
+      description: 'RAG-powered automated email response system',
+      longDescription: 'An intelligent email assistant leveraging Retrieval-Augmented Generation (RAG) to draft context-aware replies. It reduces manual effort by analyzing incoming emails and generating accurate responses based on your custom document knowledge base.',
       techStack: ['Python', 'LangChain', 'FastAPI', 'ChromaDB', 'OpenAI API', 'React'],
-      github: 'https://github.com/Yash-Raj-2403/Fixora',
+      github: 'https://github.com/Yash-Raj-2403/Fixora.git',
+      liveDemo: 'https://fixor-theta.vercel.app/',
       category: 'AI/ML',
       visualType: 'rag',
     },
     {
       id: 3,
       title: 'RhythmIQ',
-      description: 'ECG Analysis & Arrhythmia Detection',
-      longDescription: 'A medical AI system designed to assist cardiologists. It uses deep convolution neural networks (CNNs) to analyze ECG images and classify heartbeats with 94% accuracy. The model was trained on the MIT-BIH Arrhythmia Database and supports real-time image upload and analysis.',
-      techStack: ['Python', 'TensorFlow', 'Keras', 'OpenCV', 'NumPy', 'Flask'],
+      description: 'Medical AI for real-time arrhythmia detection',
+      longDescription: 'Advanced medical AI system that classifies 6 types of heart arrhythmias from ECG images with 94% accuracy. Built with a microservices architecture using Spring Boot for the web app and a Flask-based CNN model for real-time inference.',
+      techStack: ['Spring Boot', 'Python', 'TensorFlow', 'OpenCV', 'Deep Learning', 'Flask'],
       github: 'https://github.com/Yash-Raj-2403/RhythmIQ',
       category: 'AI/ML',
       visualType: 'ecg',
+    },
+    {
+      id: 4,
+      title: 'Kidera',
+      description: 'Gamified holistic child development platform',
+      longDescription: 'An interactive platform fostering holistic growth in children through gamified learning modules. Features comprehensive progress tracking for parents and educators, aiming to make early childhood development engaging and measurable.',
+      techStack: ['React', 'Node.js', 'Redux', 'MongoDB', 'Tailwind CSS'],
+      github: 'https://github.com/Yash-Raj-2403/Kidera.git',
+      liveDemo: 'https://kidera.in',
+      category: 'Full-Stack',
+      visualType: 'health',
+    },
+    {
+      id: 5,
+      title: 'Why Not',
+      description: 'AI-powered career intelligence & rejection analysis',
+      longDescription: 'A next-gen career platform helping students navigate placements. Features AI-powered rejection analysis to provide actionable feedback, resume intelligence scoring, and "Application Snapshots" to freeze profiles at the time of application.',
+      techStack: ['React', 'Firebase', 'Google Gemini AI', 'Tailwind CSS', 'Framer Motion'],
+      github: 'https://github.com/Yash-Raj-2403/Why-Not.git',
+      liveDemo: 'https://why-not-omega.vercel.app/',
+      category: 'Web App',
+      visualType: 'chat',
+    },
+    {
+      id: 6,
+      title: 'MentiSphere',
+      description: 'Professional mentorship connecting talent & experts',
+      longDescription: 'A dedicated platform streamlining the mentorship process. Connects mentees with industry experts via smart matching, featuring integrated video scheduling, goal tracking, and resource sharing to accelerate professional growth.',
+      techStack: ['React', 'Firebase', 'WebRTC', 'Node.js', 'Express'],
+      github: 'https://github.com/Yash-Raj-2403/MentiSphere.git',
+      liveDemo: 'https://menti-sphere.vercel.app/',
+      category: 'EdTech',
+      visualType: 'rag', // Reusing rag visualization for connectivity/network feel
+    },
+    {
+      id: 7,
+      title: 'MediConnect',
+      description: 'AI-driven healthcare ecosystem for patients & doctors',
+      longDescription: 'A comprehensive healthcare platform integrating the "Aura" AI health assistant. Features smart doctor discovery, symptom analysis, secure telemedicine consultations, and automated medication reminders in a modern, secure environment.',
+      techStack: ['React', 'Supabase', 'Groq AI', 'Tailwind CSS', 'TypeScript'],
+      github: 'https://github.com/Yash-Raj-2403/MediConnect.git',
+      liveDemo: 'https://mediconnect-drab.vercel.app/',
+      category: 'HealthTech',
+      visualType: 'health',
     }
   ];
 
@@ -126,6 +172,52 @@ const Projects = () => {
              <line x1="0" y1="50" x2="200" y2="50" stroke="#333" strokeWidth="1" />
              <line x1="0" y1="20" x2="200" y2="20" stroke="#333" strokeWidth="0.5" strokeDasharray="2" />
              <line x1="0" y1="80" x2="200" y2="80" stroke="#333" strokeWidth="0.5" strokeDasharray="2" />
+          </svg>
+        );
+      case 'health':
+        return (
+          <svg className="w-full h-48 bg-dark-800" viewBox="0 0 200 100">
+             <motion.path
+               d="M100 30 C 80 10, 50 30, 50 60 C 50 80, 100 90, 100 90 C 100 90, 150 80, 150 60 C 150 30, 120 10, 100 30"
+               fill="none"
+               stroke="#ff0055"
+               strokeWidth="3"
+               initial={{ pathLength: 0, scale: 0.8 }}
+               animate={{ pathLength: 1, scale: [1, 1.1, 1] }}
+               transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+             />
+             <motion.rect
+               x="90" y="45" width="20" height="6" fill="#fff"
+               animate={{ opacity: [0.5, 1, 0.5] }}
+               transition={{ duration: 2, repeat: Infinity }}
+             />
+             <motion.rect
+               x="97" y="38" width="6" height="20" fill="#fff"
+               animate={{ opacity: [0.5, 1, 0.5] }}
+               transition={{ duration: 2, repeat: Infinity }}
+             />
+          </svg>
+        );
+      case 'chat':
+        return (
+          <svg className="w-full h-48 bg-dark-800" viewBox="0 0 200 100">
+             <motion.rect
+               x="40" y="30" width="80" height="40" rx="10"
+               fill="#333" stroke="#00f6ff" strokeWidth="1"
+               initial={{ opacity: 0, y: 10 }}
+               animate={{ opacity: 1, y: 0 }}
+               transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
+             />
+             <motion.rect
+               x="80" y="50" width="80" height="40" rx="10"
+               fill="#00f6ff" opacity="0.2"
+               initial={{ opacity: 0, y: 10 }}
+               animate={{ opacity: 0.2, y: 0 }}
+               transition={{ duration: 2, delay: 1, repeat: Infinity, repeatType: "reverse" }}
+             />
+             <circle cx="60" cy="50" r="3" fill="#fff" />
+             <circle cx="70" cy="50" r="3" fill="#fff" />
+             <circle cx="80" cy="50" r="3" fill="#fff" />
           </svg>
         );
       default:
