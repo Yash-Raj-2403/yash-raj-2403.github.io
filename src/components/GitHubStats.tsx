@@ -1,5 +1,5 @@
 import { motion, useInView, useSpring, useTransform } from 'framer-motion';
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 
 const AnimatedCounter = ({ value }: { value: number }) => {
   const spring = useSpring(0, { mass: 0.8, stiffness: 75, damping: 15 });
@@ -19,15 +19,49 @@ const AnimatedCounter = ({ value }: { value: number }) => {
 const GitHubStats = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const [stats, setStats] = useState({
+    repos: 0,
+    followers: 0,
+    stars: 0,
+    contributions: 0,
+  });
 
-  // Data - ideally this would come from an API, but for now we set realistic manual values
-  // or use the static values as "snapshots"
-  const stats = {
-    repos: 42,
-    commits: 1240,
-    stars: 156,
-    contributions: 487,
-  };
+  useEffect(() => {
+    const fetchStats = async () => {
+      try {
+        const [userRes, reposRes, contribRes] = await Promise.all([
+          fetch('https://api.github.com/users/Yash-Raj-2403'),
+          fetch('https://api.github.com/users/Yash-Raj-2403/repos?per_page=100'),
+          fetch('https://github-contributions-api.jogruber.de/v4/Yash-Raj-2403')
+        ]);
+
+        const userData = await userRes.json();
+        const reposData = await reposRes.json();
+        const contribData = await contribRes.json();
+
+        // Safe check for reposData being an array (it might be an object if error)
+        const starsCount = Array.isArray(reposData) 
+          ? reposData.reduce((acc: number, repo: any) => acc + (repo.stargazers_count || 0), 0)
+          : 0;
+
+        // Sum total contributions across all years available in the API
+        const totalContributions = contribData.total 
+          ? Object.values(contribData.total).reduce((acc: number, val: any) => acc + val, 0)
+          : 0;
+
+        setStats({
+          repos: userData.public_repos || 0,
+          followers: userData.followers || 0,
+          stars: starsCount,
+          contributions: totalContributions,
+        });
+      } catch (error) {
+        console.error('Error fetching GitHub stats:', error);
+      }
+    };
+
+    fetchStats();
+  }, []);
 
   const languages = [
     { name: 'Python', percentage: 35, color: '#3776ab' },
@@ -58,7 +92,7 @@ const GitHubStats = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
             {[
               { label: 'Repositories', value: stats.repos, icon: '📦', color: 'text-neon-cyan' },
-              { label: 'Total Commits', value: stats.commits, icon: '💻', color: 'text-neon-purple' },
+              { label: 'Followers', value: stats.followers, icon: '👥', color: 'text-neon-purple' },
               { label: 'Stars Earned', value: stats.stars, icon: '⭐', color: 'text-neon-green' },
               { label: 'Contributions', value: stats.contributions, icon: '🔥', color: 'text-neon-pink' },
             ].map((stat, index) => (

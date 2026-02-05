@@ -71,7 +71,7 @@ const Projects = () => {
       longDescription: 'A next-gen career platform helping students navigate placements. Features AI-powered rejection analysis to provide actionable feedback, resume intelligence scoring, and "Application Snapshots" to freeze profiles at the time of application.',
       techStack: ['React', 'Firebase', 'Google Gemini AI', 'Tailwind CSS', 'Framer Motion'],
       github: 'https://github.com/Yash-Raj-2403/Why-Not.git',
-      liveDemo: 'https://why-not-omega.vercel.app/',
+      liveDemo: 'https://why-not-teal.vercel.app/',
       category: 'Web App',
       visualType: 'chat',
     },

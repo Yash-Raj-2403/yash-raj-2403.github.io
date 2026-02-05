@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yash Raj - Resume</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        body {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            line-height: 1.4;
+            color: #333;
+            max-width: 21cm;
+            margin: 0 auto;
+            background: white;
+            padding: 2cm;
+        }
+        .header {
+            border-bottom: 2px solid #2d3748;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #1a365d;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        .title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+        .contact-info {
+            font-size: 14px;
+            color: #4a5568;
+        }
+        .contact-info a {
+            color: #3182ce;
+            text-decoration: none;
+        }
+        .section {
+            margin-bottom: 18px;
+        }
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #2c5282;
+            text-transform: uppercase;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 4px;
+            margin-bottom: 10px;
+        }
+        .item {
+            margin-bottom: 10px;
+        }
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2px;
+        }
+        .item-title {
+            font-weight: bold;
+            font-size: 15px;
+            color: #1a202c;
+        }
+        .item-subtitle {
+            font-size: 14px;
+            color: #4a5568;
+            font-weight: 600;
+        }
+        .item-date {
+            font-size: 13px;
+            color: #718096;
+            font-style: italic;
+        }
+        .item-description {
+            font-size: 14px;
+            margin-top: 4px;
+            text-align: justify;
+        }
+        ul {
+            margin: 4px 0;
+            padding-left: 18px;
+        }
+        li {
+            margin-bottom: 2px;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            font-size: 14px;
+        }
+        .skill-category {
+            font-weight: bold;
+            color: #2d3748;
+        }
+        @media print {
+            body { 
+                padding: 1cm;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+        .download-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #3182ce;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <a href="javascript:window.print()" class="download-btn no-print">Save as PDF</a>
+
+    <div class="header">
+        <div class="name">Yash Raj</div>
+        <div class="title">Software Developer</div>
+        <div class="contact-info">
+            Ranchi, India | <a href="mailto:yashraj24007@gmail.com">yashraj24007@gmail.com</a> | +91 9263390380<br>
+            <a href="https://linkedin.com/in/yash-raj-2403">LinkedIn</a> | <a href="https://github.com/Yash-Raj-2403">GitHub: Yash-Raj-2403</a>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Professional Profile</div>
+        <div class="item-description">
+            Motivated Computer Science and Engineering undergraduate at KL University Hyderabad with a robust foundation in software development and full-stack engineering. Proficient in C++, Java, Python, and the MERN stack, with hands-on experience in building scalable web applications and AI-integrated solutions. Passionate about solving complex algorithmic problems and delivering efficient, user-centric products.
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Education</div>
+        <div class="item">
+            <div class="item-header">
+                <span class="item-title">KL University Hyderabad</span>
+                <span class="item-date">Jul 2024 — May 2028 (Expected)</span>
+            </div>
+            <div class="item-subtitle">Bachelor of Technology in Computer Science and Engineering</div>
+            <div class="item-description">
+                Focus on Data Structures, Algorithms, Web Development, and Artificial Intelligence.
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-header">
+                <span class="item-title">Jawahar Vidya Mandir Shyamali</span>
+                <span class="item-date">Apr 2014 — May 2024</span>
+            </div>
+            <div class="item-subtitle">Senior Secondary (Class XII) - Science</div>
+            <div class="item-description">
+                Completed with 78.2%. Key subjects: Physics, Chemistry, Mathematics.
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Technical Skills</div>
+        <div class="skills-grid">
+            <div><span class="skill-category">Languages:</span> C, C++, Java, Python, JavaScript, TypeScript</div>
+            <div><span class="skill-category">Frontend:</span> React.js, Tailwind CSS, Framer Motion, HTML5</div>
+            <div><span class="skill-category">Backend:</span> Node.js, Express.js, PostgreSQL, MongoDB, Firebase</div>
+            <div><span class="skill-category">Concepts:</span> Data Structures & Algorithms, OOP, REST APIs, DBMS</div>
+            <div><span class="skill-category">Tools/Platforms:</span> Git, GitHub, VS Code, Vercel, Postman</div>
+            <div><span class="skill-category">AI/ML:</span> Deep Learning, TensorFlow, OpenCV, RAG (Retrieval-Augmented)</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Experience</div>
+        <div class="item">
+            <div class="item-header">
+                <span class="item-title">ERP Developer Intern</span>
+                <span class="item-date">Aug 2025 — Present</span>
+            </div>
+            <div class="item-subtitle">KL University, Hyderabad</div>
+            <div class="item-description">
+                <ul>
+                    <li>Contributed to the development of the university ERP portal serving over 20,000 students and faculty members.</li>
+                    <li>Designed and implemented modules for attendance tracking, grade management, and student information systems.</li>
+                    <li>Optimized database queries in PostgreSQL, improving data processing efficiency by 30%.</li>
+                    <li>Ensured 99% data integrity and system reliability through rigorous testing and validation logic.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Projects</div>
+        
+        <div class="item">
+            <div class="item-header">
+                <span class="item-title">ROOTSnROUTES - AI Tourism Platform</span>
+                <span class="item-date">Full Stack Project</span>
+            </div>
+            <div class="item-description">
+                <ul>
+                    <li>Developed an AI-powered travel planning platform achieving 94% trip planning accuracy using tailored algorithms.</li>
+                    <li>Implemented secure blockchain-based payments via Web3.js and immersive AR/VR destination previews using A-Frame.</li>
+                    <li>Built a responsive Progressive Web App (PWA) supporting 7 languages with real-time features using Supabase.</li>
+                    <li>Tech Stack: React 18, TypeScript, Tailwind CSS, Node.js, MongoDB.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <span class="item-title">Fixora - Automated Response System</span>
+                <span class="item-date">AI & Web Development</span>
+            </div>
+            <div class="item-description">
+                <ul>
+                    <li>Engineered an intelligent email assistant using Retrieval-Augmented Generation (RAG) to draft context-aware replies.</li>
+                    <li>Reduced manual email processing time by automating responses based on custom knowledge bases.</li>
+                    <li>Tech Stack: Python, LangChain, FastAPI, ChromaDB, React.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <span class="item-title">MentiSphere - Mentorship Platform</span>
+                <span class="item-date">Award Winning Project</span>
+            </div>
+            <div class="item-description">
+                <ul>
+                    <li>Created a platform connecting students with industry experts featuring video scheduling and resource sharing.</li>
+                    <li>Secured 2nd Place in the OpenSourceX Hackathon sponsored by Red Hat.</li>
+                    <li>Tech Stack: React, Firebase, WebRTC.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Achievements</div>
+        <div class="item-description">
+            <ul>
+                <li><strong>2nd Place</strong>, OpenSourceX Hackathon (Sept 2025) - Team Mentisphere. Hosted at KL University.</li>
+                <li>Achieved <strong>5 Star</strong> Rating in C++ and <strong>3 Star</strong> in Python on HackerRank.</li>
+                <li>Solved 500+ algorithmic problems across LeetCode, CodeChef, and Codeforces.</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

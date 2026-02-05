@@ -201,10 +201,15 @@ const Hero = () => {
           </a>
 
           <a
-            href="#contact"
-            className="px-8 py-3 bg-dark-800 border border-neon-green text-neon-green rounded-lg hover:bg-neon-green hover:text-dark-900 transition-all"
+            href="/resume.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-3 bg-dark-800 border border-neon-green text-neon-green rounded-lg hover:bg-neon-green hover:text-dark-900 transition-all flex items-center gap-2"
           >
-            Download Resume
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            View Resume
           </a>
         </motion.div>
 
