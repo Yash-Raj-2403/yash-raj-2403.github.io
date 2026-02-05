@@ -26,9 +26,6 @@ const TechStack = () => {
     { name: 'TypeScript', category: 'Web', color: 'from-blue-500 to-blue-700' },
     { name: 'React', category: 'Web', color: 'from-cyan-400 to-blue-500' },
     { name: 'Node.js', category: 'Web', color: 'from-green-500 to-green-700' },
-    { name: 'Express', category: 'Web', color: 'from-gray-600 to-gray-800' },
-    { name: 'Redux', category: 'Web', color: 'from-purple-500 to-purple-700' },
-    { name: 'Tailwind', category: 'Web', color: 'from-cyan-300 to-cyan-500' },
 
     // Databases
     { name: 'MySQL', category: 'Databases', color: 'from-blue-400 to-orange-400' },

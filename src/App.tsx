@@ -3,8 +3,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import TechStack from './components/TechStack';
 import Projects from './components/Projects';
-import GitHubStats from './components/GitHubStats';
-import Platforms from './components/Platforms';
+import Stats from './components/Stats';
 import Contact from './components/Contact';
 import CursorGlow from './components/CursorGlow';
 import Header from './components/Header';
@@ -29,8 +28,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/tech-stack" element={<TechStack />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/stats" element={<GitHubStats />} />
-          <Route path="/platforms" element={<Platforms />} />
+          <Route path="/stats" element={<Stats />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>

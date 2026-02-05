@@ -64,13 +64,22 @@ const Hero = () => {
   ];
 
   useEffect(() => {
+    const timeouts: number[] = [];
     let delay = 0;
+
+    setBootLogs([]); // Reset logs on mount
+
     logs.forEach((log) => {
-      setTimeout(() => {
+      const timeoutId = window.setTimeout(() => {
         setBootLogs(prev => [...prev, log]);
       }, delay);
+      timeouts.push(timeoutId);
       delay += 800; // Stagger logs
     });
+
+    return () => {
+      timeouts.forEach(clearTimeout);
+    };
   }, []);
 
   const codeSnippets = [
