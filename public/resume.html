@@ -22,6 +22,20 @@
             border-bottom: 2px solid #2d3748;
             padding-bottom: 10px;
             margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .header-content {
+            flex: 1;
+        }
+        .profile-photo {
+            width: 100px;
+            height: 125px;
+            object-fit: cover;
+            margin-left: 20px;
+            border: 1px solid #cbd5e0;
+            border-radius: 4px;
         }
         .name {
             font-size: 28px;
@@ -128,12 +142,15 @@
     <a href="javascript:window.print()" class="download-btn no-print">Save as PDF</a>
 
     <div class="header">
-        <div class="name">Yash Raj</div>
-        <div class="title">Software Developer</div>
-        <div class="contact-info">
-            Ranchi, India | <a href="mailto:yashraj24007@gmail.com">yashraj24007@gmail.com</a> | +91 9263390380<br>
-            <a href="https://linkedin.com/in/yash-raj-2403">LinkedIn</a> | <a href="https://github.com/Yash-Raj-2403">GitHub: Yash-Raj-2403</a>
+        <div class="header-content">
+            <div class="name">Yash Raj</div>
+            <div class="title">Software Developer</div>
+            <div class="contact-info">
+                Ranchi, India | <a href="mailto:yashraj24007@gmail.com">yashraj24007@gmail.com</a> | +91 9263390380<br>
+                <a href="https://linkedin.com/in/yash-raj-2403">LinkedIn</a> | <a href="https://github.com/Yash-Raj-2403">GitHub: Yash-Raj-2403</a>
+            </div>
         </div>
+        <img src="https://avatars.githubusercontent.com/u/196000011?v=4" alt="Yash Raj" class="profile-photo">
     </div>
 
     <div class="section">
@@ -162,7 +179,7 @@
             </div>
             <div class="item-subtitle">Senior Secondary (Class XII) - Science</div>
             <div class="item-description">
-                Completed with 78.2%. Key subjects: Physics, Chemistry, Mathematics.
+                Key subjects: Physics, Chemistry, Mathematics.
             </div>
         </div>
     </div>
