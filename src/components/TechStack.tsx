@@ -40,13 +40,9 @@ const TechStack = () => {
     { name: 'NumPy', category: 'ML & Data', color: 'from-blue-400 to-cyan-500' },
     { name: 'Matplotlib', category: 'ML & Data', color: 'from-orange-400 to-red-500' },
     { name: 'scikit-learn', category: 'ML & Data', color: 'from-orange-500 to-yellow-500' },
-    { name: 'TensorFlow', category: 'ML & Data', color: 'from-orange-500 to-red-500' },
-    { name: 'PyTorch', category: 'ML & Data', color: 'from-red-500 to-orange-600' },
     
     // Tools
     { name: 'Git', category: 'Tools', color: 'from-orange-600 to-red-600' },
-    { name: 'Docker', category: 'Tools', color: 'from-blue-500 to-cyan-500' },
-    { name: 'Figma', category: 'Tools', color: 'from-purple-500 to-pink-500' },
     { name: 'Linux', category: 'Tools', color: 'from-yellow-500 to-yellow-600' },
   ];
 

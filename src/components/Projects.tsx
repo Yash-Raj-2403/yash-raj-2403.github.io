@@ -96,6 +96,16 @@ const Projects = () => {
       liveDemo: 'https://mediconnect-drab.vercel.app/',
       category: 'HealthTech',
       visualType: 'health',
+    },
+    {
+      id: 8,
+      title: 'Codica',
+      description: 'Chrome extension to sync CodeChef submissions to GitHub',
+      longDescription: 'A powerful browser extension that streamlines your competitive programming workflow. It automatically pushes successful CodeChef submissions to your GitHub repository, organizes code by problem, and visualizes your coding activity and statistics in a unified dashboard.',
+      techStack: ['JavaScript', 'HTML5/CSS3', 'Chrome API', 'GitHub REST API', 'Chart.js'],
+      github: 'https://github.com/Yash-Raj-2403/Codica-CodeChef_Extension.git',
+      category: 'DevTool',
+      visualType: 'rag',
     }
   ];
 

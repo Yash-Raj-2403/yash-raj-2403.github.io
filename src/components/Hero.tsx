@@ -11,9 +11,7 @@ const Hero = () => {
 
   const fullText = "Hi, I'm Yash Raj";
   const roles = [
-    "Software Developer", 
-    "AI Engineer Aspirant", 
-    "Full-Stack Builder", 
+    "Software Engineer", 
     "Open Source Enthusiast"
   ];
 
@@ -82,6 +80,8 @@ const Hero = () => {
     { code: 'await innovate();', lang: 'javascript', x: '75%', y: '65%' },
   ];
 
+  const article = /^[AEIOU]/i.test(roles[loopNum % roles.length]) ? "an" : "a";
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background Grid */}
@@ -136,7 +136,7 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 1 }}
           >
-            I am a <span className="text-neon-purple font-bold">{roleText}</span>
+            I am {article} <span className="text-neon-purple font-bold">{roleText}</span>
             <span className="animate-pulse">|</span>
           </motion.p>
         </div>
