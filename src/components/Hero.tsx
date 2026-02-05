@@ -67,7 +67,7 @@ const Hero = () => {
 
   useEffect(() => {
     let delay = 0;
-    logs.forEach((log, index) => {
+    logs.forEach((log) => {
       setTimeout(() => {
         setBootLogs(prev => [...prev, log]);
       }, delay);
