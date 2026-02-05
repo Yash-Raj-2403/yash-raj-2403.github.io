@@ -1,83 +1,63 @@
-https://github.com/Yash-Raj-2403/yash-raj-2403.github.io.git# Yash Raj - Portfolio Website
+# Developer Portfolio
 
-A modern, interactive, and futuristic portfolio website built with React, TypeScript, Tailwind CSS, and Framer Motion.
+A high-performance, interactive personal portfolio website designed to showcase software development expertise, technical projects, and real-time coding statistics. Built with modern web technologies focusing on performance, accessibility, and a distinctive developer-centric aesthetic.
 
-## 🌟 Features
+🔗 **Live Demo:** [yash-raj-2403.github.io](https://yash-raj-2403.github.io)
 
-- **Futuristic Design**: Dark mode with neon accents (cyan, purple, green, pink)
-- **Smooth Animations**: Powered by Framer Motion with scroll-based reveals
-- **Responsive**: Fully responsive design for mobile, tablet, and desktop
-- **Interactive Elements**: Cursor glow effects, floating particles, and hover animations
-- **Code-Themed**: Terminal-style elements and syntax-highlighted sections
-- **SEO-Friendly**: Optimized meta tags and semantic HTML
+## 🛠️ Technical Architecture
 
-## 🚀 Sections
+This project utilizes a modern frontend stack to deliver a seamless user experience:
 
-1. **Hero Section** - Animated typing effect with floating code snippets
-2. **About Me** - Code-style biography with syntax highlighting
-3. **Tech Stack** - Categorized technology cards with hover animations
-4. **Featured Projects** - Expandable cards with animated visualizations
-5. **GitHub Stats** - Contribution graph and language statistics
-6. **Coding Platforms** - LeetCode, CodeChef, Codeforces, HackerRank
-7. **Contact** - Social links with mouse-reactive particles
+- **Core Framework:** React 18 with TypeScript for type-safe component development.
+- **Build Tooling:** Vite for lightning-fast HMR and optimized production builds.
+- **Styling:** Tailwind CSS for a utility-first, responsive design system.
+- **Animations:** Framer Motion for complex, hardware-accelerated orchestrations and layout transitions.
+- **Routing:** React Router v6 for client-side navigation.
+- **Integration:** Real-time fetching of LeetCode, CodeChef, and Codeforces statistics via custom API handling.
 
-## 🛠️ Tech Stack
+## ✨ Key Features
 
-- **Framework**: React 18 with TypeScript
-- **Build Tool**: Vite
-- **Styling**: Tailwind CSS
-- **Animations**: Framer Motion
-- **Font**: JetBrains Mono
+- **Mac-Terminal Aesthetic:** Custom-styled components mimicking IDE environments with syntax highlighting.
+- **Real-Time Data Aggregation:** Dynamically fetches and displays live competitive programming stats and GitHub activity.
+- **Interactive UI/UX:** Features a custom cursor glow, scroll-triggered reveal animations, and glassmorphism effects.
+- **Fully Responsive:** Mobile-first architecture ensuring consistent rendering across all viewports.
+- **Performance Optimized:** Code splitting, lazy loading, and optimized asset delivery (Lighthouse score > 90).
 
-## 📦 Installation
+## 🚀 Graphic Assets & Design
 
-```bash
-# Install dependencies
-npm install
+The interface adopts a "Cyber-Dark" theme using a specific color palette:
+- **Neon Cyan:** `#00f3ff` (Primary Accents)
+- **Neon Purple:** `#bc13fe` (Secondary Accents)
+- **Neon Green:** `#0aff00` (Success/String States)
+- **Dark Backgrounds:** Layered shades of `#0a0a0a` to `#1a1a1a`.
 
-# Run development server
-npm run dev
+## 💻 Local Development
 
-# Build for production
-npm run build
+To set up the project locally for development or contribution:
 
-# Preview production build
-npm run preview
-```
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Yash-Raj-2403/yash-raj-2403.github.io.git
+   cd yash-raj-2403.github.io
+   ```
 
-## 🎨 Customization
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-### Colors
-Edit `tailwind.config.js` to customize the neon color palette.
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
 
-### Content
-- Update project data in `src/components/Projects.tsx`
-- Modify tech stack in `src/components/TechStack.tsx`
-- Change social links in `src/components/Contact.tsx`
+4. **Build for production**
+   ```bash
+   npm run build
+   ```
 
-## 👤 Author
+## 📬 Contact
 
-**Yash Raj** - Software Developer | AI Engineer Aspirant | Full-Stack Builder
-
-Building intelligent solutions, one algorithm at a time.
-
----
-
-Built with ❤️ using React, TypeScript, Tailwind CSS, and Framer Motion
-
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+**Yash Raj**  
+Full-Stack Developer  
+[LinkedIn](https://linkedin.com/in/yash-raj-2403) • [GitHub](https://github.com/yash-raj-2403) • [Email](mailto:yashraj24007@gmail.com)
